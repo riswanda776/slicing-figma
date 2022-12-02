@@ -47,7 +47,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     height: 700,
                     child: TabBarView(children: [
                       _phoneView(),
-                      Text("data"),
+                      Center(child: Text("Page")),
                     ]),
                   ),
                 ],
@@ -76,11 +76,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
           height: 12,
         ),
         SizedBox(
-          child: Row(
-            children: const [
-              Text("Referral ID (Optional)"),
-              Icon(Icons.arrow_drop_down)
-            ],
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Row(
+              children: const [
+                Text("Referral ID (Optional)"),
+                Icon(Icons.arrow_drop_down)
+              ],
+            ),
           ),
         ),
         const SizedBox(
@@ -141,6 +144,7 @@ class ButtonRegister extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(horizontal: 12),
       height: 50,
       width: double.infinity,
       decoration: BoxDecoration(
@@ -162,7 +166,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 12),
+      padding: const EdgeInsets.only(top: 12, right: 12, left: 12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
